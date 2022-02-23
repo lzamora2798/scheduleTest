@@ -23,6 +23,13 @@ class Testing(unittest.TestCase):
         file.close()
         b = {('RENE', 'ASTRID'): 2, ('ASTRID', 'ANDRES'): 2, ('RENE', 'ANDRES'): 1}
         self.assertEqual(response, b)
+    
+    def test_wrong_time_formar(self):
+        file = open("resources/calendar_wrong_time_format.csv","r")
+        response = processFile(file)
+        file.close()
+        b = None
+        self.assertEqual(response, b)
 
 if __name__ == '__main__':
     unittest.main()
