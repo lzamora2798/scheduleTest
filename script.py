@@ -19,7 +19,7 @@ def processFile(file):
         schedules = schedules.split(",")
         for schedule in schedules:
             day = schedule[:2]
-            time_range = schedule[3:].split("-")
+            time_range = schedule[2:].split("-")
             schedules_dic[day] = schedules_dic.get(day,{})
             schedules_dic[day][name] = [convertToSeconds(i) for i in time_range] 
         names_list.append(name)
@@ -38,8 +38,3 @@ def processFile(file):
 
 
 
-file = open("resources/calendar3.csv","r")
-d = processFile(file)
-print()
-print(d)
-#pprint.pprint(d)
