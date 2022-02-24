@@ -1,4 +1,3 @@
-import imp
 import unittest
 from script import processFile
 class Testing(unittest.TestCase):
